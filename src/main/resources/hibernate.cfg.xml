@@ -9,8 +9,10 @@
         <property name="connection.username">root</property>
         <property name="connection.password">root</property>
         <!--<property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
-        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--change the dialect as using mysql version 8. previous dialect giving error-->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
+        <mapping class="org.yash.Student"/>
     </session-factory>
 </hibernate-configuration>
